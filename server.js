@@ -64,7 +64,7 @@ app.post("/suggestions", (req, res) => {
 });
 
 app.get("/suggestions", (req, res) => {
-    const str = "<h1>SUGGESTIONS</h1><br><hr><br>" + db.suggestions.map((val, idx) => {return `${idx+1}. ${val}`}).join("\n");
+    const str = "<h1>SUGGESTIONS</h1><br><hr><br><pre>" + db.suggestions.map((val, idx) => {return `${idx+1}. ${val}`}).join("\n") + "</pre>;
     res.send(str);
 })
 
